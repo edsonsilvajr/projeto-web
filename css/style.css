@@ -916,8 +916,46 @@ footer a:hover {
   }
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .fade-in {
   animation: fadeIn var(--transition-slow);
+}
+
+.form-alert {
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--radius-md);
+  margin: var(--spacing-4) 0;
+  border-left: 4px solid;
+  font-weight: var(--font-weight-medium);
+  animation: slideDown var(--transition-base);
+}
+
+.field-error,
+.error-message,
+.cep-loading,
+.cep-success,
+.cep-error {
+  animation: fadeIn var(--transition-fast);
+}
+
+input.valid,
+select.valid,
+textarea.valid {
+  border-color: var(--color-success) !important;
+}
+
+input.invalid,
+select.invalid,
+textarea.invalid {
+  border-color: var(--color-error) !important;
 }
 
 .projects-grid {
