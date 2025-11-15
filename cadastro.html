@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cadastre-se como voluntário ou doador e faça parte da transformação social"
+    />
+    <meta
+      name="keywords"
+      content="cadastro voluntário, cadastro doador, inscrição ONG"
+    />
+    <title>Cadastro - Esperança Solidária</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="imagens/logo.png"
+        alt="Logo Esperança Solidária"
+        width="200"
+        height="80"
+      />
+      <h1>Cadastro</h1>
+      <p>Faça parte da nossa causa</p>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastre-se</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Junte-se a Nós</h2>
+        <p>
+          Preencha o formulário abaixo para se cadastrar como voluntário ou
+          doador. Nossa equipe entrará em contato em breve!
+        </p>
+        <img
+          src="imagens/cadastro-banner.jpg"
+          alt="Pessoas unindo as mãos"
+          width="700"
+          height="300"
+        />
+      </section>
+
+      <section>
+        <h2>Formulário de Cadastro</h2>
+
+        <form
+          action="https://esperancasolidaria.org.br/processa-cadastro"
+          method="post"
+        >
+          <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <p>
+              <label for="nome">Nome Completo:</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                required
+                minlength="3"
+                maxlength="100"
+                placeholder="Digite seu nome completo"
+                autocomplete="name"
+              />
+            </p>
+
+            <p>
+              <label for="email">E-mail:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="seuemail@exemplo.com"
+                autocomplete="email"
+              />
+            </p>
+
+            <p>
+              <label for="cpf">CPF:</label>
+              <input
+                type="text"
+                id="cpf"
+                name="cpf"
+                required
+                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                placeholder="000.000.000-00"
+                title="Digite o CPF no formato: 000.000.000-00"
+                maxlength="14"
+              />
+            </p>
+
+            <p>
+              <label for="telefone">Telefone:</label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                required
+                pattern="\(\d{2}\) \d{4,5}-\d{4}"
+                placeholder="(00) 00000-0000"
+                title="Digite o telefone no formato: (00) 00000-0000"
+                maxlength="15"
+                autocomplete="tel"
+              />
+            </p>
+
+            <p>
+              <label for="datanascimento">Data de Nascimento:</label>
+              <input
+                type="date"
+                id="datanascimento"
+                name="datanascimento"
+                required
+                min="1900-01-01"
+                max="2010-12-31"
+                autocomplete="bday"
+              />
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Endereço</legend>
+
+            <p>
+              <label for="cep">CEP:</label>
+              <input
+                type="text"
+                id="cep"
+                name="cep"
+                required
+                pattern="\d{5}-\d{3}"
+                placeholder="00000-000"
+                title="Digite o CEP no formato: 00000-000"
+                maxlength="9"
+                autocomplete="postal-code"
+              />
+            </p>
+
+            <p>
+              <label for="endereco">Endereço:</label>
+              <input
+                type="text"
+                id="endereco"
+                name="endereco"
+                required
+                minlength="5"
+                maxlength="200"
+                placeholder="Rua, Avenida, etc"
+                autocomplete="address-line1"
+              />
+            </p>
+
+            <p>
+              <label for="numero">Número:</label>
+              <input
+                type="text"
+                id="numero"
+                name="numero"
+                required
+                maxlength="10"
+                placeholder="0000"
+              />
+            </p>
+
+            <p>
+              <label for="complemento">Complemento:</label>
+              <input
+                type="text"
+                id="complemento"
+                name="complemento"
+                maxlength="50"
+                placeholder="Apartamento, Bloco, etc (opcional)"
+              />
+            </p>
+
+            <p>
+              <label for="bairro">Bairro:</label>
+              <input
+                type="text"
+                id="bairro"
+                name="bairro"
+                required
+                minlength="2"
+                maxlength="50"
+                placeholder="Nome do bairro"
+              />
+            </p>
+
+            <p>
+              <label for="cidade">Cidade:</label>
+              <input
+                type="text"
+                id="cidade"
+                name="cidade"
+                required
+                minlength="2"
+                maxlength="50"
+                placeholder="Nome da cidade"
+                autocomplete="address-level2"
+              />
+            </p>
+
+            <p>
+              <label for="estado">Estado:</label>
+              <select
+                id="estado"
+                name="estado"
+                required
+                autocomplete="address-level1"
+              >
+                <option value="">Selecione um estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+              </select>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Informações Adicionais</legend>
+
+            <p>
+              <label for="tipo">Tipo de Cadastro:</label>
+              <select id="tipo" name="tipo" required>
+                <option value="">Selecione uma opção</option>
+                <option value="voluntario">Voluntário</option>
+                <option value="doador">Doador</option>
+                <option value="ambos">Voluntário e Doador</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="profissao">Profissão:</label>
+              <input
+                type="text"
+                id="profissao"
+                name="profissao"
+                minlength="2"
+                maxlength="50"
+                placeholder="Sua profissão (opcional)"
+              />
+            </p>
+
+            <p>
+              <label for="formacao">Formação Acadêmica:</label>
+              <select id="formacao" name="formacao">
+                <option value="">Selecione</option>
+                <option value="fundamental">Ensino Fundamental</option>
+                <option value="medio">Ensino Médio</option>
+                <option value="tecnico">Curso Técnico</option>
+                <option value="superior">Ensino Superior</option>
+                <option value="posgraduacao">Pós-Graduação</option>
+                <option value="mestrado">Mestrado</option>
+                <option value="doutorado">Doutorado</option>
+              </select>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Áreas de Interesse (para Voluntários)</legend>
+
+            <p>
+              Selecione as áreas em que você gostaria de atuar como voluntário:
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="area-educacao"
+                name="areas"
+                value="educacao"
+              />
+              <label for="area-educacao">Educação e Reforço Escolar</label>
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="area-capacitacao"
+                name="areas"
+                value="capacitacao"
+              />
+              <label for="area-capacitacao">Capacitação Profissional</label>
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="area-saude"
+                name="areas"
+                value="saude"
+              />
+              <label for="area-saude">Saúde e Bem-Estar</label>
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="area-alimentacao"
+                name="areas"
+                value="alimentacao"
+              />
+              <label for="area-alimentacao">Segurança Alimentar</label>
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="area-moradia"
+                name="areas"
+                value="moradia"
+              />
+              <label for="area-moradia">Moradia e Infraestrutura</label>
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="area-comunicacao"
+                name="areas"
+                value="comunicacao"
+              />
+              <label for="area-comunicacao">Comunicação e Marketing</label>
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="area-tecnologia"
+                name="areas"
+                value="tecnologia"
+              />
+              <label for="area-tecnologia">Tecnologia da Informação</label>
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="area-juridico"
+                name="areas"
+                value="juridico"
+              />
+              <label for="area-juridico">Assessoria Jurídica</label>
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="area-administrativo"
+                name="areas"
+                value="administrativo"
+              />
+              <label for="area-administrativo"
+                >Administrativo e Financeiro</label
+              >
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="area-eventos"
+                name="areas"
+                value="eventos"
+              />
+              <label for="area-eventos">Eventos e Campanhas</label>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Disponibilidade (para Voluntários)</legend>
+
+            <p>Qual sua disponibilidade semanal?</p>
+
+            <p>
+              <input
+                type="radio"
+                id="disp-4h"
+                name="disponibilidade"
+                value="4h"
+              />
+              <label for="disp-4h">4 horas semanais</label>
+            </p>
+
+            <p>
+              <input
+                type="radio"
+                id="disp-8h"
+                name="disponibilidade"
+                value="8h"
+              />
+              <label for="disp-8h">8 horas semanais</label>
+            </p>
+
+            <p>
+              <input
+                type="radio"
+                id="disp-12h"
+                name="disponibilidade"
+                value="12h"
+              />
+              <label for="disp-12h">12 horas semanais</label>
+            </p>
+
+            <p>
+              <input
+                type="radio"
+                id="disp-16h"
+                name="disponibilidade"
+                value="16h"
+              />
+              <label for="disp-16h">16 horas ou mais semanais</label>
+            </p>
+
+            <p>
+              <input
+                type="radio"
+                id="disp-flexivel"
+                name="disponibilidade"
+                value="flexivel"
+              />
+              <label for="disp-flexivel">Disponibilidade flexível</label>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Período Preferencial (para Voluntários)</legend>
+
+            <p>Qual período você prefere atuar?</p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="periodo-manha"
+                name="periodo"
+                value="manha"
+              />
+              <label for="periodo-manha">Manhã</label>
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="periodo-tarde"
+                name="periodo"
+                value="tarde"
+              />
+              <label for="periodo-tarde">Tarde</label>
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="periodo-noite"
+                name="periodo"
+                value="noite"
+              />
+              <label for="periodo-noite">Noite</label>
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="periodo-fds"
+                name="periodo"
+                value="fds"
+              />
+              <label for="periodo-fds">Finais de Semana</label>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Informações sobre Doações</legend>
+
+            <p>
+              <label for="tipo-doacao">Tipo de Doação:</label>
+              <select id="tipo-doacao" name="tipo-doacao">
+                <option value="">Não desejo doar no momento</option>
+                <option value="mensal">Doação Mensal</option>
+                <option value="pontual">Doação Pontual</option>
+                <option value="alimentos">Doação de Alimentos</option>
+                <option value="materiais">Doação de Materiais</option>
+                <option value="servicos">Doação de Serviços</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="valor-doacao">Valor da Doação (se aplicável):</label>
+              <input
+                type="number"
+                id="valor-doacao"
+                name="valor-doacao"
+                min="10"
+                max="1000000"
+                step="10"
+                placeholder="R$ 0,00"
+              />
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Mensagem</legend>
+
+            <p>
+              <label for="mensagem"
+                >Conte-nos um pouco sobre você e por que deseja fazer parte da
+                Esperança Solidária:</label
+              >
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="6"
+                cols="50"
+                minlength="20"
+                maxlength="1000"
+                placeholder="Escreva sua mensagem aqui... (mínimo 20 caracteres)"
+              ></textarea>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Como Conheceu a Esperança Solidária?</legend>
+
+            <p>
+              <input
+                type="radio"
+                id="conheceu-internet"
+                name="conheceu"
+                value="internet"
+                required
+              />
+              <label for="conheceu-internet">Pesquisa na Internet</label>
+            </p>
+
+            <p>
+              <input
+                type="radio"
+                id="conheceu-redes"
+                name="conheceu"
+                value="redes"
+              />
+              <label for="conheceu-redes">Redes Sociais</label>
+            </p>
+
+            <p>
+              <input
+                type="radio"
+                id="conheceu-amigo"
+                name="conheceu"
+                value="amigo"
+              />
+              <label for="conheceu-amigo">Indicação de Amigo</label>
+            </p>
+
+            <p>
+              <input
+                type="radio"
+                id="conheceu-midia"
+                name="conheceu"
+                value="midia"
+              />
+              <label for="conheceu-midia">Mídia (TV, Rádio, Jornal)</label>
+            </p>
+
+            <p>
+              <input
+                type="radio"
+                id="conheceu-evento"
+                name="conheceu"
+                value="evento"
+              />
+              <label for="conheceu-evento">Evento ou Campanha</label>
+            </p>
+
+            <p>
+              <input
+                type="radio"
+                id="conheceu-outros"
+                name="conheceu"
+                value="outros"
+              />
+              <label for="conheceu-outros">Outros</label>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Confirmação e Termos</legend>
+
+            <p>
+              <input
+                type="checkbox"
+                id="aceite-termos"
+                name="aceite-termos"
+                required
+              />
+              <label for="aceite-termos">
+                Li e aceito os <a href="#" target="_blank">Termos de Uso</a> e a
+                <a href="#" target="_blank">Política de Privacidade</a>
+              </label>
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="aceite-comunicacao"
+                name="aceite-comunicacao"
+              />
+              <label for="aceite-comunicacao">
+                Aceito receber comunicações da Esperança Solidária por e-mail e
+                telefone
+              </label>
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="aceite-newsletter"
+                name="aceite-newsletter"
+              />
+              <label for="aceite-newsletter">
+                Desejo receber a newsletter mensal com notícias e novidades
+              </label>
+            </p>
+          </fieldset>
+
+          <p>
+            <button type="submit">Enviar Cadastro</button>
+            <button type="reset">Limpar Formulário</button>
+          </p>
+        </form>
+      </section>
+
+      <section>
+        <h2>Dúvidas sobre o Cadastro?</h2>
+
+        <article>
+          <h3>Perguntas Frequentes</h3>
+
+          <h4>Preciso ter experiência prévia para ser voluntário?</h4>
+          <p>
+            Não! Oferecemos treinamento e orientação para todos os voluntários.
+            O mais importante é ter disponibilidade e comprometimento com a
+            causa.
+          </p>
+
+          <h4>Qual a idade mínima para ser voluntário?</h4>
+          <p>
+            A idade mínima é 16 anos. Menores de 18 anos precisam de autorização
+            dos responsáveis.
+          </p>
+
+          <h4>As doações são dedutíveis do Imposto de Renda?</h4>
+          <p>
+            Sim! Fornecemos recibo de doação que pode ser utilizado para dedução
+            no IR, tanto para pessoas físicas quanto jurídicas.
+          </p>
+
+          <h4>Como funciona o processo após o cadastro?</h4>
+          <p>
+            Após o cadastro, nossa equipe entrará em contato em até 48 horas
+            para agendar uma entrevista e apresentar as oportunidades
+            disponíveis.
+          </p>
+
+          <h4>Posso ser voluntário e doador ao mesmo tempo?</h4>
+          <p>
+            Claro! Muitos dos nossos colaboradores atuam tanto como voluntários
+            quanto como doadores regulares.
+          </p>
+
+          <h4>Existe algum compromisso de permanência?</h4>
+          <p>
+            Pedimos um compromisso mínimo de 3 meses para voluntários, mas
+            entendemos que imprevistos podem acontecer. O importante é comunicar
+            com antecedência.
+          </p>
+        </article>
+
+        <article>
+          <h3>Ainda tem dúvidas?</h3>
+          <p>Entre em contato conosco:</p>
+          <p>
+            E-mail:
+            <a href="mailto:voluntario@esperancasolidaria.org.br"
+              >voluntario@esperancasolidaria.org.br</a
+            ><br />
+            Telefone: <a href="tel:+551133334444">(11) 3333-4444</a><br />
+            WhatsApp: <a href="tel:+5511999887766">(11) 99988-7766</a>
+          </p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Próximos Passos</h2>
+        <img
+          src="imagens/proximos-passos.jpg"
+          alt="Caminho para o sucesso"
+          width="600"
+          height="300"
+        />
+
+        <article>
+          <h3>O que acontece após o cadastro?</h3>
+
+          <ol>
+            <li>
+              <h4>Análise do Cadastro</h4>
+              <p>
+                Nossa equipe analisa seu cadastro e identifica as melhores
+                oportunidades para seu perfil.
+              </p>
+            </li>
+
+            <li>
+              <h4>Contato Inicial</h4>
+              <p>
+                Entramos em contato por e-mail ou telefone para agendar uma
+                entrevista.
+              </p>
+            </li>
+
+            <li>
+              <h4>Entrevista</h4>
+              <p>
+                Realizamos uma entrevista para conhecer melhor suas expectativas
+                e apresentar nossos projetos.
+              </p>
+            </li>
+
+            <li>
+              <h4>Treinamento</h4>
+              <p>
+                Voluntários participam de um treinamento inicial sobre nossos
+                processos e valores.
+              </p>
+            </li>
+
+            <li>
+              <h4>Início das Atividades</h4>
+              <p>
+                Você começa a atuar no projeto escolhido com acompanhamento da
+                nossa equipe.
+              </p>
+            </li>
+          </ol>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2024 Esperança Solidária - CNPJ: 12.345.678/0001-90</p>
+      <p>Todos os direitos reservados</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastre-se</a></li>
+        </ul>
+      </nav>
+      <p>
+        <a href="mailto:contato@esperancasolidaria.org.br"
+          >contato@esperancasolidaria.org.br</a
+        >
+        |
+        <a href="tel:+551133334444">(11) 3333-4444</a>
+      </p>
+    </footer>
+  </body>
+</html>
