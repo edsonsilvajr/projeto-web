@@ -2,17 +2,6 @@
 
 Projeto de site institucional para ONG desenvolvido com HTML5 semântico puro.
 
-## Estrutura do Projeto
-
-```
-projeto-web/
-├── index.html          # Página inicial com informações da organização
-├── projetos.html       # Página de projetos sociais e como ajudar
-├── cadastro.html       # Formulário de cadastro com validação
-├── imagens/           # Pasta para armazenar as imagens
-└── README.md          # Este arquivo
-```
-
 ## Páginas Desenvolvidas
 
 ### 1. index.html
